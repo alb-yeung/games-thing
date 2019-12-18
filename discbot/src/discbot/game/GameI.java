@@ -2,5 +2,5 @@ package discbot.game;
 
 public interface GameI{
     String draw();
-    void interpretInput();
+    void interpretInput(String inputIn);
 }
