@@ -5,4 +5,5 @@ import discbot.game.chessgame.Spot;
 
 public interface PieceI {
     boolean canMove(Chessboard currBoard, Spot currSpot, Spot moveTo);
+    Color getColor();
 }

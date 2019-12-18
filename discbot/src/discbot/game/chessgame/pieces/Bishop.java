@@ -5,10 +5,17 @@ import discbot.game.chessgame.Spot;
 
 public class Bishop implements PieceI {
 
+    private Color color;
+
     @Override
     public boolean canMove(Chessboard currBoard, Spot currSpot, Spot moveTo) {
         // TODO Auto-generated method stub
         return false;
+    }
+
+    @Override
+    public Color getColor() {
+        return color;
     }
     
 }

@@ -10,4 +10,9 @@ public class EmptyPiece implements PieceI {
         return false;
     }
     
+    @Override
+    public Color getColor() {
+        return Color.NONE;
+    }
+
 }
