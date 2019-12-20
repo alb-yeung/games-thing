@@ -9,7 +9,11 @@ public class Knight implements PieceI {
 
     @Override
     public boolean canMove(Chessboard currBoard, Spot currSpot, Spot moveTo) {
-        // TODO Auto-generated method stub
+        if (moveTo.getCurrPiece().getColor() == color)
+            return false;
+        if ((Math.abs(moveTo.getX() - currSpot.getX()) == 2) && (Math.abs(moveTo.getY() - currSpot.getY()) == 1) ||
+                (Math.abs(moveTo.getX() - currSpot.getX()) == 1 && (Math.abs(moveTo.getY() - currSpot.getY()) == 2)))
+            return true;
         return false;
     }
 
