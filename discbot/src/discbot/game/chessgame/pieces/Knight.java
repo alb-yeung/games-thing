@@ -7,6 +7,12 @@ public class Knight implements PieceI {
 
     private Color color;
 
+    private Knight(){}
+
+    public Knight(Color cIn){
+        color = cIn;
+    }
+
     @Override
     public boolean canMove(Chessboard currBoard, Spot currSpot, Spot moveTo) {
         if (moveTo.getCurrPiece().getColor() == color)

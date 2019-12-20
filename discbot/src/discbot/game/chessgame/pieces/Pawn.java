@@ -10,9 +10,7 @@ public class Pawn implements PieceI {
     private boolean movedBefore;
     private Color color;
 
-    public Pawn(){
-        movedBefore = false;
-    }
+    private Pawn(){}
 
     public Pawn(Color cIn){
         movedBefore = false;
