@@ -1,6 +1,8 @@
 package discbot.game.chessgame;
 
 import discbot.game.chessgame.pieces.EmptyPiece;
+import discbot.util.logger.LoggerValues;
+import discbot.util.logger.MyLogger;
 
 public class Chessboard {
 
@@ -28,6 +30,21 @@ public class Chessboard {
 
     public Spot getSpot(int x, int y){
         return board[x][y];
+    }
+
+    public void clear(){
+        for (int i = 0; i < 8; i++){
+            for (int j = 0; j < 8; j++){
+                board[i][j] = new Spot(i, j, new EmptyPiece());
+            }
+        }
+        MyLogger.printMessage("Board cleared", LoggerValues.CHESS);
+    }
+
+    @Override
+    public String toString(){
+        // TODO
+        return "";
     }
 
 }

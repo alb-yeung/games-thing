@@ -11,6 +11,11 @@ public class MyLogger{
         debugLevel = LoggerValues.values()[debugLevelIn];
     }
 
+    public static void printLine(LoggerValues debugValue){
+        if (debugValue.ordinal() >= debugLevel.ordinal())
+            System.out.println("----------------------------");
+    }
+
     public static void printMessage(String messageIn, LoggerValues debugValue){
         if (debugValue.ordinal() >= debugLevel.ordinal()){
             System.out.println(messageIn);

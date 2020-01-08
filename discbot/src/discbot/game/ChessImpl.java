@@ -12,7 +12,7 @@ public class ChessImpl implements GameI{
 
     @Override
     public String draw(){
-        return "";
+        return currBoard.toString();
     }
 
 	@Override
