@@ -50,6 +50,10 @@ public class Driver{
 
         MyLogger.printMessage("" + pawn1.canMove(board, board.getSpot(0, 0),board.getSpot(1, 0)), LoggerValues.CHESS);                  // false
 
+        board.getSpot(1,1).setCurrPiece(pawn2);
+
+        MyLogger.printMessage("" + pawn1.canMove(board, board.getSpot(0, 0),board.getSpot(1, 1)), LoggerValues.CHESS);                  // true
+
         board.clear();
 
         /**
@@ -123,11 +127,20 @@ public class Driver{
          * Blocked by piece and captures
          */
 
+        MyLogger.printMessage("Blocked by pieces and captures", LoggerValues.CHESS);
+
         PieceI pawn5 = new Pawn(Color.WHITE);
         board.getSpot(4,6).setCurrPiece(pawn5);
 
         MyLogger.printMessage("" + rook1.canMove(board, board.getSpot(4,4), board.getSpot(4,7)), LoggerValues.CHESS);                   // false
         MyLogger.printMessage("" + rook1.canMove(board, board.getSpot(4,4), board.getSpot(4,6)), LoggerValues.CHESS);                   // true
+
+        PieceI pawn6 = new Pawn(Color.BLACK);
+        board.getSpot(6,4).setCurrPiece(pawn6);
+
+        MyLogger.printMessage("" + rook1.canMove(board, board.getSpot(4,4), board.getSpot(5,4)), LoggerValues.CHESS);                   // true
+        MyLogger.printMessage("" + rook1.canMove(board, board.getSpot(4,4), board.getSpot(6,4)), LoggerValues.CHESS);                   // false
+        MyLogger.printMessage("" + rook1.canMove(board, board.getSpot(4,4), board.getSpot(7,4)), LoggerValues.CHESS);                   // false
 
         board.clear();
 

@@ -1,0 +1,92 @@
+CLEAR
+
+######################
+#### PAWN TESTING ####
+######################
+
+LINE
+PRINT Pawn testing
+LINE
+
+PRINT Basic Movement
+
+SET Pawn Black 0 0
+
+MOVE 0 0 1 0 True
+MOVE 0 0 2 0 True
+
+LINE
+
+PRINT Capturing
+
+SET Pawn White 1 0
+SET Pawn White 1 1
+
+MOVE 0 0 1 0 False
+MOVE 0 0 1 1 True
+
+CLEAR
+
+########################
+#### KNIGHT TESTING ####
+########################
+
+LINE
+PRINT Knight testing
+LINE
+
+PRINT Basic Movement
+
+SET Knight Black 3 3
+
+MOVE 3 3 1 2 True
+MOVE 3 3 2 2 False
+MOVE 3 3 2 1 True
+MOVE 3 3 5 2 True
+
+LINE
+
+PRINT Blocked and Capturing
+
+SET Pawn Black 2 5
+SET Pawn White 5 2
+
+MOVE 3 3 2 5 False
+MOVE 3 3 5 2 True
+
+CLEAR
+
+######################
+#### ROOK TESTING ####
+######################
+
+LINE
+PRINT Rook testing
+LINE
+
+PRINT Basic Movement
+
+SET Rook Black 4 4
+
+MOVE 4 4 5 4 True
+MOVE 4 4 4 7 True
+MOVE 4 4 2 4 True
+MOVE 4 4 4 1 True
+MOVE 4 4 4 4 False
+MOVE 4 4 6 6 False
+MOVE 4 4 2 3 False
+
+LINE
+
+Print Blocked by pieces and captures
+
+SET Pawn White 4 6
+Set Pawn Black 6 4
+
+MOVE 4 4 4 7 False
+MOVE 4 4 4 6 True
+MOVE 4 4 5 4 True
+MOVE 4 4 6 4 False
+MOVE 4 4 7 5 False
+
+CLEAR
